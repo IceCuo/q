@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<title>小说喵</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#f5f5f5;
+font-family:
+PingFang SC,
+Helvetica,
+Arial,
+sans-serif;
+color:#333;
+}
+
+img{
+display:block;
+width:100%;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* 顶部 */
+
+.header{
+height:165px;
+background:linear-gradient(
+180deg,
+#7eb4ea 0%,
+#ffffff 100%
+);
+padding:55px 18px 0;
+position:relative;
+}
+
+.logo{
+font-size:18px;
+font-weight:500;
+color:#5d9de5;
+}
+
+.capsule{
+position:absolute;
+top:35px;
+right:18px;
+width:72px;
+height:30px;
+background:#efefef;
+border-radius:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+font-size:14px;
+}
+
+/* 分区 */
+
+.section{
+background:#fff;
+padding:16px;
+margin-bottom:10px;
+}
+
+.section-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:18px;
+}
+
+.section-title{
+display:flex;
+align-items:center;
+font-size:17px;
+font-weight:700;
+color:#333;
+}
+
+.section-title::before{
+content:"";
+width:5px;
+height:18px;
+background:#69aff5;
+border-radius:5px;
+margin-right:8px;
+}
+
+.more{
+font-size:14px;
+color:#999;
+}
+
+/* 排行榜 */
+
+.rank-list{
+display:flex;
+justify-content:space-between;
+}
+
+.rank-item{
+width:31%;
+}
+
+.rank-cover{
+height:155px;
+border-radius:6px;
+overflow:hidden;
+}
+
+.rank-title{
+margin-top:10px;
+font-size:15px;
+line-height:20px;
+height:20px;
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+}
+
+.rank-author{
+margin-top:4px;
+font-size:13px;
+color:#999;
+}
+
+/* 小说列表 */
+
+.grid{
+display:grid;
+grid-template-columns:
+repeat(3,1fr);
+gap:18px 16px;
+}
+
+.book-cover{
+height:155px;
+border-radius:6px;
+overflow:hidden;
+}
+
+.book-title{
+font-size:15px;
+margin-top:8px;
+line-height:20px;
+}
+
+.book-author{
+font-size:13px;
+color:#999;
+margin-top:4px;
+}
+
+/* 底部导航 */
+
+.bottom-space{
+height:80px;
+}
+
+.tabbar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+height:65px;
+background:#fff;
+border-top:1px solid #ececec;
+display:flex;
+z-index:999;
+}
+
+.tab{
+flex:1;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-size:12px;
+color:#b7b7b7;
+}
+
+.tab svg{
+width:22px;
+height:22px;
+margin-bottom:3px;
+fill:currentColor;
+}
+
+.tab.active{
+color:#68aef4;
+}
+
+/* 底部黑条 */
+
+.home-indicator{
+position:fixed;
+bottom:6px;
+left:50%;
+transform:translateX(-50%);
+width:135px;
+height:5px;
+background:#000;
+border-radius:5px;
+pointer-events:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="logo">
+小说喵
+</div>
+
+<div class="capsule">
+•••
+◉
+</div>
+
+</div>
+
+<!-- 排行榜 -->
+
+<div class="section">
+
+<div class="section-header">
+<div class="section-title">
+小说排行榜
+</div>
+<div class="more">
+更多 >
+</div>
+</div>
+
+<div class="rank-list">
+
+<div class="rank-item">
+<div class="rank-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093159_20260615104355.jpg">
+</div>
+<div class="rank-title">网游之恶魔猎人</div>
+<div class="rank-author">我路任我</div>
+</div>
+
+<div class="rank-item">
+<div class="rank-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093303_20260615104341.jpg">
+</div>
+<div class="rank-title">超级文明</div>
+<div class="rank-author">伏之笔岸</div>
+</div>
+
+<div class="rank-item">
+<div class="rank-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093319_20260615104326.jpg">
+</div>
+<div class="rank-title">诸天战尊</div>
+<div class="rank-author">剑之痕</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- 男频 -->
+
+<div class="section">
+
+<div class="section-header">
+<div class="section-title">
+男频小说
+</div>
+<div class="more">
+更多 >
+</div>
+</div>
+
+<div class="grid">
+
+<div class="book">
+<div class="book-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093336_20260615104311.jpg">
+</div>
+<div class="book-title">守林人2</div>
+<div class="book-author">高小定</div>
+</div>
+
+<div class="book">
+<div class="book-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093354_20260615104254.jpg">
+</div>
+<div class="book-title">华山论剑</div>
+<div class="book-author">耳元洛图</div>
+</div>
+
+<div class="book">
+<div class="book-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093429_20260615104239.jpg">
+</div>
+<div class="book-title">我变成了一匹狼</div>
+<div class="book-author">灵魂拷问</div>
+</div>
+
+<div class="book">
+<div class="book-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093443_20260615104221.jpg">
+</div>
+<div class="book-title">枪不落地</div>
+<div class="book-author">韩紫云</div>
+</div>
+
+<div class="book">
+<div class="book-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093509_20260615104204.jpg">
+</div>
+<div class="book-title">我有颗恶魔树</div>
+<div class="book-author">卸甲藏锋</div>
+</div>
+
+<div class="book">
+<div class="book-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093522_20260615104146.jpg">
+</div>
+<div class="book-title">斗血世界</div>
+<div class="book-author">君莫强</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- 女频 -->
+
+<div class="section">
+
+<div class="section-header">
+<div class="section-title">
+女频小说
+</div>
+<div class="more">
+更多 >
+</div>
+</div>
+
+<div class="grid">
+
+<div class="book">
+<div class="book-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093550_20260615104132.jpg">
+</div>
+<div class="book-title">我的师傅是神明</div>
+<div class="book-author">奈奈信音</div>
+</div>
+
+<div class="book">
+<div class="book-cover">
+<img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093609_20260615104119.jpg">
+</div>
+<div class="book-title">锦麟记</div>
+<div class="book-author">一裂残鸢</div>
+</div>
+
+<div class="book">
+<div class="book-cover">
+        <img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093625_20260615104056.jpg">
+</div>
+            <div class="book-title">美人</div>
+            <div class="book-author">牛肉火勺</div>
+        </div>
+
+        <div class="book">
+            <div class="book-cover">
+            <img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093640_20260615104038.jpg">
+        </div>
+            <div class="book-title">冰荒有空间</div>
+            <div class="book-author">沐沐</div>
+        </div>
+
+        <div class="book">
+            <div class="book-cover">
+            <img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093653_20260615104018.jpg">
+            </div>
+            <div class="book-title">我的道侣是只狐</div>
+            <div class="book-author">沙雕本雕</div>
+        </div>
+
+        <div class="book">
+            <div class="book-cover">
+            <img src="C:\Users\Administrator\Downloads\h\IMG_20260615_093711_20260615103958.jpg">
+            </div>
+            <div class="book-title">大神躺好我带飞</div>
+            <div class="book-author">离歌</div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="bottom-space"></div>
+
+<div class="tabbar">
+
+    <div class="tab active">
+        <svg viewBox="0 0 1024 1024">
+            <path d="M512 128L128 448h96v352h224V608h128v192h224V448h96z"/>
+        </svg>
+        首页
+    </div>
+
+    <div class="tab">
+        <svg viewBox="0 0 1024 1024">
+            <path d="M224 160h576v704H224z"/>
+        </svg>
+        书架
+    </div>
+        
+    <div class="tab">
+        <svg viewBox="0 0 1024 1024">
+            <path d="M512 512a160 160 0 100-320 160 160 0 000 320zm0 64c-212 0-320 108-320 224h640c0-116-108-224-320-224z"/>
+        </svg>
+        我的
+    </div>
+
+</div>
+
+<div class="home-indicator"></div>
+
+</body>
+</html>
